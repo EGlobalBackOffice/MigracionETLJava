@@ -1,0 +1,39 @@
+logging:
+  file:
+    name: /path/to/log.log
+
+spring:
+  sql:
+    datasource:
+      jdbc-url: jdbc:sqlserver://localhost:1434;databaseName=linsce_emisor;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        config-table: dbo.c_origen
+        log-table: dbo.LogPackage
+        petition-table: dbo.d_peticion
+        chargebacks-table: dbo.d_contracargos
+        bussines-table: dbo.c_negocio
+        paypal-table: dbo.h_paypal
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    datasource-lots:
+      jdbc-url: jdbc:sqlserver://localhost:1434;databaseName=lotes_br;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        lots-table: dbo.lotes_br
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    batch:
+      jdbc:
+        initialize-schema: never
+
+name-process: bo-mx-disputes-batch-notification-paypal
+name-file: prueba01
+path-file: C:\Users\Ivana\Documents\etl-reportes
+group-paypal: 46878
+issuer-cc: 4,15,16,17,18,19,43,74
+status-exception-sp: RS,RR,RM,RI,RH,RG,RF,RC,LS,LR,LI,LC,L
+status-exception-cc:  RC,RG,RH,RR,RS
+

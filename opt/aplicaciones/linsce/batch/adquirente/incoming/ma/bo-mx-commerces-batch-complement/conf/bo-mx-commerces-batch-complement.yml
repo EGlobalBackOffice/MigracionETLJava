@@ -1,0 +1,39 @@
+logging:
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/incoming/ma/bo-mx-commerces-batch-complement/config/logback.xml
+spring:
+  sql:
+    datasource-target:
+      jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us-east-1.rds.amazonaws.com:1433;databaseName=Linsce_Adq_br;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        config-table: dbo.c_origen
+        log-table: dbo.LogPackage
+        complement-table: dbo.c_complemento
+        petition-table: dbo.d_peticion
+        negocio-table: dbo.c_negocio
+        conversion-emisores-table: dbo.cConversionEmisores
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    batch:
+      jdbc:
+        initialize-schema: never
+authentication-target: 
+  method: basic
+  cyberark-url: http://localhost:8080/cyberark/
+  folder: 1231
+  object: 4111
+  reason: 1212
+  app-id: 6712
+  safe: 00191
+br:
+  process:
+    complement:
+      file-name: COM_DMRP_CTACH
+      input-path: /opt/aplicaciones/linsce/batch/adquirente/incoming/ma/bo-mx-commerces-batch-complement/in
+
+nombre-proceso: bo-mx-commerces-batch-complement
+c-adq-numero: 12
+c-sta-clave: D
+c-neg-med-entre: 2
+c-neg-grupo: 4

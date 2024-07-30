@@ -1,0 +1,46 @@
+logging:
+  file:
+    name: /path/to/log.log
+spring:
+  sql:
+    datasource:
+      jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us'east-1.rds.amazonaws.com:1433;databaseName=Linsce_Adq_br;encrypt=true;trustServerCertificate=true
+
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        config-table: dbo.c_origen
+        log-table: dbo.LogPackage
+        cmp-table: dbo.oucmptelcel
+        petition-table: dbo.d_peticion
+        negocio-table: dbo.c_negocio
+        conversion-emisores-table: dbo.cConversionEmisores
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    datasource-lots:
+      jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us-east-1.rds.amazonaws.com:1433;databaseName=lotes_br;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        lots-table: dbo.lotes_br
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    batch:
+      jdbc:
+        initialize-schema: never
+authentication: basic
+cmp:
+  process:
+    in:
+      file-name: cmp-telcel
+      input-path: /app/eBind/batch/bo-mx-disputes-batch-cmp-telcel/in/cmp-telcel.txt
+    out:
+      file-name: cmp-telcel
+      output-path: /app/eBind/batch/bo-mx-disputes-batch-cmp-telcel/resultado/
+nombre-proceso: bo-mx-disputes-batch-cmp-telcel
+c-adq-numero: 12
+c-sta-clave: D
+c-neg-med-entre: 2
+c-neg-grupo: 4
+
+

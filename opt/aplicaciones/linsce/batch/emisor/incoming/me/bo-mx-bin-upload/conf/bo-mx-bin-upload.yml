@@ -1,0 +1,35 @@
+logging:
+  file:
+    name: /path/to/log.log
+
+spring:
+  sql:
+    datasource:
+      jdbc-url: jdbc:sqlserver://localhost:1434;databaseName=linsce_emisor;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        config-table: bines_emisor.p_origen
+        log-table: bines_emisor.LogPackage
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    batch:
+      jdbc:
+        initialize-schema: never
+  informix:
+    datasource:
+      jdbc-url: jdbc:informix-sqli://44.194.109.214:9088/test
+      username: informixdev
+      password: informixdev
+authentication:
+  method: basic
+  cyberark-url: http://localhost:8080/cyberark/
+  folder: 1231
+  object: 4111
+  reason: 1212
+  app-id: 6712
+  safe: 00191
+pagina: 50
+nombreProceso: bo-mx-bin-upload
+ids: [1,2,3,4]
+

@@ -1,0 +1,37 @@
+logging:
+  file:
+    name: /path/to/log.log
+
+spring:
+  sql:
+    datasource:
+      jdbc-url: jdbc:sqlserver://localhost:1434;databaseName=linsce_emisor;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        config-table: dbo.c_origen
+        log-table: dbo.LogPackage
+        petition-table: dbo.d_peticion
+        chargebacks-table: dbo.d_contracargos
+        bussines-table: dbo.c_negocio
+        netflix-table: dbo.h_netflix
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    batch:
+      jdbc:
+        initialize-schema: never
+
+name-process: bo-mx-disputes-batch-notification-netflix
+name-file: prueba01
+path-file: C:\Users\Ivana\Documents\etl-reportes
+group-sp-status: 4143789
+group-sp-date: 4143789
+group-cc-status: 46878
+group-cc-date: 46878
+issuer-sp-status: 4,15,16,17,18,19,43,74
+issuer-sp-date: 4,15,16,17,18,19,43,74
+status-exception-sp-status: RS,RR,RM,RI,RH,RG,RF,RC,LS,LR,LI,LC,L,NT
+status-exception-sp-date: RS,RR,RM,RI,RH,RG,RF,RC,LS,LR,LI,LC,L
+status-exception-cc-status:  RC,RG,RH,RR,RS,NT
+status-exception-cc-date: RC,RG,RH,RR,RS
+

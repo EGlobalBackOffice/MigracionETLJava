@@ -1,0 +1,36 @@
+logging:
+  file:
+    name: /path/to/log.log
+
+spring:
+  sql:
+    datasource:
+      jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us-east-1.rds.amazonaws.com:1433;databaseName=Linsce_Adq_br;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        config-table: dbo.c_origen
+        log-table: dbo.LogPackage
+        petition-table: dbo.d_peticion
+        bussines-table: dbo.c_negocio
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    datasource-lots:
+      jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us-east-1.rds.amazonaws.com:1433;databaseName=lotes_br;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        lots-table: dbo.lotes_br
+        lots-his-table: dbo.lil_rec_det_his
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    batch:
+      jdbc:
+        initialize-schema: never
+c_neg_grupo: '4'
+c_sta_clave: 'D'
+name-process: bo-mx-disputes-batch-notification-liverpool
+name-file: liverpool
+path-file: /app/eBind/batch/bo-mx-disputes-batch-notification-liverpool/resultado/
+
+

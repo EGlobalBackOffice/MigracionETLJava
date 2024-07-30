@@ -1,0 +1,57 @@
+logging:
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/outgoing/ma/bo-mx-disputes-batch-cmp-main/config/logback.xml
+spring:
+  sql:
+    datasource:
+      jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us-east-1.rds.amazonaws.com:1433;databaseName=Linsce_Adq_br;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        config-table: dbo.c_origen
+        log-table: dbo.LogPackage
+        oucmp-table: dbo.oucmp
+        business-table: dbo.c_negocio
+        petition-table: dbo.d_peticion
+        dias-festivos: dbo.c_dias_festivos
+        issuer-conversion-table: dbo.cConversionEmisores
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    datasource-lots:
+      jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us-east-1.rds.amazonaws.com:1433;databaseName=lotes_br;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        lots-table: dbo.lotes_br
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    batch:
+      jdbc:
+        initialize-schema: never
+authentication:
+  method: basic
+  cyberark-url: http://localhost:8080/cyberark/
+  folder: 1231
+  object: 4111
+  reason: 1212
+  app-id: 6712
+  safe: 00191
+authentication-lots:
+  method: basic
+  cyberark-url: http://localhost:8080/cyberark/
+  folder: 1231
+  object: 4111
+  reason: 1212
+  app-id: 6712
+  safe: 00191
+step-1:
+  select-insert:
+    acquirer-number: 12
+    status-key: D, 005, 006, 007, 008, 009, 010, 011, 10
+    transaction-type: 1
+    commerce-group: 1
+step-2:
+  file:
+    output-path: /app/eBind/batch/bo-mx-disputes-batch-cmp-main/resultado/
+    file-name: cmp-main
+process:
+  process-name: bo-mx-disputes-cmp-main

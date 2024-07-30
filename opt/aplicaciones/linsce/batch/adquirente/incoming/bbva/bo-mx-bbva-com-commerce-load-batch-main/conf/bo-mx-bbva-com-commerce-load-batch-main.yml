@@ -1,0 +1,49 @@
+logging:
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/incoming/bbva/bo-mx-bbva-com-commerce-load-batch-main/config/logback.xml
+log4j:
+  logger:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+spring:
+  process: basic
+  sql:
+    datasource-target:
+      jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us-east-1.rds.amazonaws.com:1433;databaseName=Linsce_Adq_br;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        config-table: dbo.c_origen
+        log-table: dbo.LogPackage
+        table-comercios: dbo.comercios_br
+        table-dom: dbo.dom_con_br
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+      machine-name: System
+    datasource-origin:
+      jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us-east-1.rds.amazonaws.com:1433;databaseName=lotes_br;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        table-dom: dbo.dom_con_br
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  batch:
+    jdbc:
+      initialize-schema: never
+authentication-target:
+  method: basic
+  cyberark-url: http://localhost:8080/cyberark/
+  folder: 1231
+  object: 4111
+  reason: 1212
+  app-id: 6712
+  safe: 00191
+authentication-origin:
+  method: basic
+  cyberark-url: http://localhost:8080/cyberark/
+  folder: 1231
+  object: 4111
+  reason: 1212
+  app-id: 6712
+  safe: 00191

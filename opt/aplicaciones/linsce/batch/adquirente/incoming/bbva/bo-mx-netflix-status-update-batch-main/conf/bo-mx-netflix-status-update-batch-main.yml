@@ -1,0 +1,34 @@
+logging:
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/incoming/bbva/bo-mx-netflix-status-update-batch-main/config/logback.xml
+log4j:
+  logger:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+nombreProceso: bo-mx-netflix-status-update-batch-main
+maquina: System
+spring:
+  sql:
+    datasource-target:
+      jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us-east-1.rds.amazonaws.com:1433;databaseName=Linsce_Adq_br;encrypt=true;trustServerCertifi$
+      username: admin
+      password: 9f4dcRPkqhY8
+      config-table: dbo.c_origen
+      log-table: dbo.LogPackage
+      peticion-table: dbo.d_peticion
+      contracargos-table: dbo.d_contracargos
+  encripted-psw: false
+  decrypt-key: 12341234
+  batch:
+    jdbc:
+      initialize-schema: never
+authentication-target1:
+  method: basic
+  cyberark-url: http://localhost:8080/cyberark/
+  folder: 1231
+  object: 4111
+  reason: 1212
+  app-id: 6712
+  safe: 00191
+
