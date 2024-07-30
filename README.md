@@ -1,7 +1,7 @@
 # Rutas de los ETLS
 
 | Nombre ETL   | Ruta |
-|--------------|  |
+|--------------| -------------- |
 | 01 - bo-mx-bin-upload | /opt/aplicaciones/linsce/batch/emisor/incoming/me/bo-mx-bin-upload/bin/bo-mx-bin-upload.jar |
 | 02 - bo-mx-issuer-disputes-etl-upload | /opt/aplicaciones/linsce/batch/emisor/incoming/me/bo-mx-issuer-disputes-etl-upload/bin/bo-mx-issuer-disputes-etl-upload.jar |
 | 03 - bo-mx-disputes-batch-tef-file |  |
