@@ -1,7 +1,12 @@
 logging:
-  file:
-    name: /path/to/log.log
-
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/outgoing/bbva/bo-mx-disputes-batch-tef-file/log/logback.xml
+log4j:
+  logger:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+nombre-proceso: bo-mx-disputes-batch-tef-file
 spring:
   sql:
     datasource:
@@ -30,5 +35,4 @@ authentication:
 #path-archivo: /app/eBind/batch/bo-mx-disputes-batch-tef-file/resultado
 path-archivo: C:\EXOS\resultado\
 nombre-archivo: prueba01
-nombre-proceso: bo-mx-disputes-batch-tef-file
 

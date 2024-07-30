@@ -1,5 +1,12 @@
 logging:
-  config: file:/opt/aplicaciones/linsce/batch/adquirente/outgoing/ma/bo-mx-disputes-batch-cmp-main/config/logback.xml
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/outgoing/ma/bo-mx-disputes-batch-cmp-main/log/logback.xml
+log4j:
+  logger:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+nombre-proceso: bo-mx-disputes-batch-cmp-main
 spring:
   sql:
     datasource:

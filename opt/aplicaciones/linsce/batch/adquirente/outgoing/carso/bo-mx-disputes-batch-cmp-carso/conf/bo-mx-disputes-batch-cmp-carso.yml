@@ -1,5 +1,12 @@
 logging:
-  config: file:/opt/aplicaciones/linsce/batch/adquirente/outgoing/carso/bo-mx-disputes-batch-cmp-carso/config/logback.xml
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/outgoing/carso/log/logback.xml
+log4j:
+  logger:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+nombre-proceso: bo-mx-disputes-batch-cmp-carso.yml
 spring:
   sql:
     datasource:
@@ -46,7 +53,6 @@ authentication-lots:
 cmp:
   file-name: cmp
   output-path: /app/eBind/batch/bo-mx-disputes-batch-cmp-carso/resultado/
-nombre-proceso: bo-mx-disputes-batch-cmp-carso
 c-adq-numero: 12
 c-sta-clave: D,005,006,007,008,009,010,011,10
 d-pet-tip-tra: 1

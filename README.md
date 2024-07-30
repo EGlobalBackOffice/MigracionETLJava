@@ -11,7 +11,7 @@
 | 07-08 -bo-mx-disputes-batch-cmp-telcel | /opt/aplicaciones/linsce/batch/adquirente/outgoing/bbva/bo-mx-disputes-batch-cmp-telcel/bin/bo-mx-disputes-batch-cmp-telcel.jar                                |
 | 09 - bo-mx-commerces-batch-complement | /opt/aplicaciones/linsce/batch/adquirente/incoming/ma/bo-mx-commerces-batch-complement/bin/bo-mx-commerces-batch-complement.jar                                |
 | 10 - bo-mx-disputes-batch-cmp-main | /opt/aplicaciones/linsce/batch/adquirente/outgoing/ma/bo-mx-disputes-batch-cmp-main/bin/bo-mx-disputes-batch-cmp-main.jar                                      |
-| 11 - bo-mx-disputes-batch-cmp-carso |  opt/aplicaciones/linsce/batch/adquirente/outgoing/carso/bin/bo-mx-disputes-batch-cmp-carso.jar                                                               |
+| 11 - bo-mx-disputes-batch-cmp-carso | opt/aplicaciones/linsce/batch/adquirente/outgoing/carso/bo-mx-disputes-batch-cmp-carso/bin/bo-mx-disputes-batch-cmp-carso.jar                                                                |
 | 12 - bo-mx-bbva-commerce-load-etl-batch-main | /opt/aplicaciones/linsce/batch/adquirente/incoming/bbva/bo-mx-bbva-commerce-load-etl-batch-main/bin/bo-mx-bbva-commerce-load-etl-batch-main.jar                |
 | 13 - bo-mx-bbva-com-commerce-load-batch-main | /opt/aplicaciones/linsce/batch/adquirente/incoming/bbva/bo-mx-bbva-com-commerce-load-batch-main/bin/bo-mx-bbva-com-commerce-load-batch-main.jar                |
 | 14 - |                                                                                                                                                                |

@@ -1,11 +1,12 @@
 logging:
-  config: file:/opt/aplicaciones/linsce/batch/adquirente/incoming/bbva/bo-mx-bbva-commerce-load-etl-batch-main/config/logback.xml
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/incoming/bbva/bo-mx-bbva-commerce-load-etl-batch-main/log/logback.xml
 log4j:
   logger:
     org:
       springframework:
         jdbc:
           core: TRACE
+nombre-proceso: bo-mx-bbva-commerce-load-etl-batch-main
 spring:
   sql:
     datasource-target:

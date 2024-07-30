@@ -1,7 +1,12 @@
 logging:
-  file:
-    name: /path/to/log.log
-
+  config: file:/opt/aplicaciones/linsce/batch/emisor/incoming/me/bo-mx-bin-upload/log/logback.xml
+log4j:
+  logger:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+nombre-proceso: bo-mx-bin-upload
 spring:
   sql:
     datasource:
@@ -30,6 +35,5 @@ authentication:
   app-id: 6712
   safe: 00191
 pagina: 50
-nombreProceso: bo-mx-bin-upload
 ids: [1,2,3,4]
 

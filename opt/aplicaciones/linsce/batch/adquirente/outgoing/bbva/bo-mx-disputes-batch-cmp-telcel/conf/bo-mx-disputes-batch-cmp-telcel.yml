@@ -1,6 +1,12 @@
 logging:
-  file:
-    name: /path/to/log.log
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/outgoing/bbva/bo-mx-disputes-batch-cmp-telcel/log/logback.xml
+log4j:
+  logger:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+nombre-proceso: bo-mx-disputes-batch-cmp-telcel
 spring:
   sql:
     datasource:
@@ -37,7 +43,6 @@ cmp:
     out:
       file-name: cmp-telcel
       output-path: /app/eBind/batch/bo-mx-disputes-batch-cmp-telcel/resultado/
-nombre-proceso: bo-mx-disputes-batch-cmp-telcel
 c-adq-numero: 12
 c-sta-clave: D
 c-neg-med-entre: 2

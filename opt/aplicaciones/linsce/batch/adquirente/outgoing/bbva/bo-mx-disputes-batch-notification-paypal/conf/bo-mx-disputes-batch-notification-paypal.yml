@@ -1,7 +1,12 @@
 logging:
-  file:
-    name: /path/to/log.log
-
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/outgoing/bbva/bo-mx-disputes-batch-notification-paypal/log/logback.xml
+log4j:
+  logger:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+nombre-proceso: bo-mx-disputes-batch-notification-paypal
 spring:
   sql:
     datasource:
@@ -28,8 +33,6 @@ spring:
     batch:
       jdbc:
         initialize-schema: never
-
-name-process: bo-mx-disputes-batch-notification-paypal
 name-file: prueba01
 path-file: C:\Users\Ivana\Documents\etl-reportes
 group-paypal: 46878

@@ -1,5 +1,12 @@
 logging:
-  config: file:/opt/aplicaciones/linsce/batch/adquirente/incoming/ma/bo-mx-commerces-batch-complement/config/logback.xml
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/incoming/ma/bo-mx-commerces-batch-complement/log/logback.xml
+log4j:
+  logger:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+nombre-proceso: bo-mx-commerces-batch-complement
 spring:
   sql:
     datasource-target:
@@ -31,8 +38,6 @@ br:
     complement:
       file-name: COM_DMRP_CTACH
       input-path: /opt/aplicaciones/linsce/batch/adquirente/incoming/ma/bo-mx-commerces-batch-complement/in
-
-nombre-proceso: bo-mx-commerces-batch-complement
 c-adq-numero: 12
 c-sta-clave: D
 c-neg-med-entre: 2

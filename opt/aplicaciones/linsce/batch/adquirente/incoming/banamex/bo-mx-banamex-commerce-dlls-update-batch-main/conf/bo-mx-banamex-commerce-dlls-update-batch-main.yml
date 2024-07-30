@@ -1,5 +1,12 @@
 logging:
-  config: file:/opt/aplicaciones/linsce/batch/adquirente/incoming/banamex/bo-mx-banamex-commerce-dlls-update-batch-main/config/logback.xml
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/incoming/banamex/bo-mx-banamex-commerce-dlls-update-batch-main/log/logback.xml
+log4j:
+  logger:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+nombre-proceso: bo-mx-banamex-commerce-dlls-update-batch-main
 spring:
   sql:
     datasource-target:
@@ -24,4 +31,3 @@ authentication-target:
   reason: 1212
   app-id: 6712
   safe: 00191
-nombre-proceso: bo-mx-banamex-commerce-dlls-update-batch-main

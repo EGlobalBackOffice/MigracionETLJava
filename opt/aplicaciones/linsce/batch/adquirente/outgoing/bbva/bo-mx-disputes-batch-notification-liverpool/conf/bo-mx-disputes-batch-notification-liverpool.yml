@@ -1,7 +1,12 @@
 logging:
-  file:
-    name: /path/to/log.log
-
+  config: file:/opt/aplicaciones/linsce/batch/adquirente/outgoing/bbva/bo-mx-disputes-batch-notification-liverpool/log/logback.xml
+log4j:
+  logger:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
+nombre-proceso: bo-mx-disputes-batch-notification-liverpool
 spring:
   sql:
     datasource:

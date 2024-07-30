@@ -1,12 +1,12 @@
 logging:
-  file:
-    name: /path/to/log.log
+  config: file:/opt/aplicaciones/linsce/batch/emisor/incoming/me/bo-mx-issuer-disputes-etl-upload/log/logback.xml
 log4j:
   logger:
     org:
       springframework:
         jdbc:
           core: TRACE
+nombre-proceso: bo-mx-issuer-disputes-etl-upload
 spring:
   datasource:
     jdbc-url: jdbc:sqlserver://localhost:1434;databaseName=linsce_emisor;encrypt=true;trustServerCertificate=true
