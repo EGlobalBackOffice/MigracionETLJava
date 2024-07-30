@@ -1,0 +1,34 @@
+logging:
+  file:
+    name: /path/to/log.log
+
+spring:
+  sql:
+    datasource:
+      jdbc-url: jdbc:sqlserver://localhost:1434;databaseName=linsce_emisor;encrypt=true;trustServerCertificate=true
+      username: admin
+      password: 9f4dcRPkqhY8
+      data-source-properties:
+        config-table: dbo.c_origen
+        log-table: dbo.LogPackage
+        tef-cargo: dbo.tefcargo
+        d-peticion: dbo.d_peticion
+        d-contracargos: dbo.d_contracargos
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      environment: server
+    batch:
+      jdbc:
+        initialize-schema: never
+authentication:
+  method: basic
+  cyberark-url: http://localhost:8080/cyberark/
+  folder: 1231
+  object: 4111
+  reason: 1212
+  app-id: 6712
+  safe: 00191
+#path-archivo: /app/eBind/batch/bo-mx-disputes-batch-tef-file/resultado
+path-archivo: C:\EXOS\resultado\
+nombre-archivo: prueba01
+nombre-proceso: bo-mx-disputes-batch-tef-file
+
