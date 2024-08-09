@@ -12,7 +12,7 @@ spring:
     jdbc-url: jdbc:sqlserver://localhost:1434;databaseName=linsce_emisor;encrypt=true;trustServerCertificate=true
     #jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us-east-1.rds.amazonaws.com:1433;databaseName=linsce_emisor;encrypt=true;trustServerCertificate=true
     username: zAplCont01
-    password: #0ct3Z8m4X0coy0tz1n #password
+    password: #0ct3Z8m4X0coy0tz1n
     data-source-properties:
       rewriteBatchedStatements: true
       batchSize: 100
