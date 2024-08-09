@@ -11,8 +11,8 @@ spring:
   sql:
     datasource:
       jdbc-url: jdbc:sqlserver://etl-sqls-dev.c11fwywckveg.us-east-1.rds.amazonaws.com:1433;databaseName=Linsce_Adq_br;encrypt=true;trustServerCertificate=true
-      username: admin
-      password: 9f4dcRPkqhY8
+      username: zAplCont01
+      password: #0ct3Z8m4X0coy0tz1n
       data-source-properties:
         config-table: dbo.c_origen
         log-table: dbo.LogPackage
